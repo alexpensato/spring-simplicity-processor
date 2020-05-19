@@ -1,0 +1,18 @@
+package $!packageName;
+
+import $!qualifiedEntityName;
+import $!qualifiedMapperName;
+import $!qualifiedInterfaceName;
+
+import org.pensatocode.simplicity.jdbc.AbstractJdbcRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository(value = "$!repositoryBeanName")
+public class $!concreteRepositoryName extends AbstractJdbcRepository<$!entityName, Long> implements $!interfaceName {
+
+    public $!concreteRepositoryName(@Autowired JdbcTemplate jdbcTemplate) {
+        super(jdbcTemplate, new $!mapperName(), "$!tableName", $!entityClass, "$!idName");
+    }
+}
